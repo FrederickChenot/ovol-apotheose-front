@@ -1,0 +1,76 @@
+@use 'src/styles/vars';
+
+.header {
+    padding: 0 1rem;
+    color: vars.$color1;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+
+
+    &__title {
+        font-size: 2em;
+        font-family: vars.$font2;
+        font-weight: bold;
+        position: relative;
+    }
+
+    &__avatar {
+        right: 1em;
+        top: 0.6em;
+        display: flex;
+        justify-self: flex-end;
+    }
+
+    &__logo {
+        width: 2em;
+        height: 2em;
+    }
+
+    &__home {
+        left: 3em;
+        top: 0.6em;
+        display: flex;
+        justify-self: flex-end;
+    }
+
+    &__message {
+        font-size: 1.2em;
+        bottom: -10px;
+        margin: 0.1rem 0;
+    }
+
+
+}
+.header-logo {
+    width: 140px;
+}
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+
+    &__button {
+        background-color: '#12824C';
+        gap: 1em;
+        color: '#FFFFFF';
+
+    }
+}
+
+.header-input {
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.is-active {
+    visibility: hidden;
+    background-color: red;
+}

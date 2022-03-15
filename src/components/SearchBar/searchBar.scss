@@ -1,0 +1,14 @@
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em 0;
+
+    &__button {
+        background-color: '#12824C';
+        gap: 1em;
+        color: '#FFFFFF';
+
+    }
+}

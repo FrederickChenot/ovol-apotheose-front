@@ -1,0 +1,22 @@
+@use 'src/styles/vars';
+
+.App .trackCard {
+
+	height: 100%;
+	margin: 0 auto 1rem;
+	
+
+	&-content {
+		&:last-child {
+			padding-bottom: 0;
+		}
+		
+		&__detail {
+			font-size: 0.8em;
+		}
+	}
+
+	// & .fa-flag {
+	// 	color: green;
+	// }
+}
