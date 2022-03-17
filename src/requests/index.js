@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiAxios = axios.create({
-  baseURL: 'https://apiovol.herokuapp.com/api',
+  baseURL: 'https://app-ovol-aphoteose.herokuapp.com/api',
 
 });
 
