@@ -42,6 +42,7 @@ function Filters({
 
   const theme = useTheme();
   const filterWidth = useMediaQuery(theme.breakpoints.down('sm'));
+  console.log('filtericiiiiiiiiiiiiiii', filterWidth);
 
   const handleChange = (key, value) => {
     console.log(key, value);
