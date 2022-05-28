@@ -240,6 +240,7 @@ function App() {
                     tracksList={tracksList}
                     onFilterChange={handleFilterChange}
                     onResetFilter={handleResetFilter}
+                    isLogged={isLogged}
                   />
                 )}
               />

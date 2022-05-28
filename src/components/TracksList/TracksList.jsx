@@ -14,6 +14,7 @@ function TracksList({
   onFilterChange,
   onResetFilter,
   onActiveNav,
+  isLogged,
   ...rest
 }) {
   useEffect(() => {
@@ -53,6 +54,7 @@ function TracksList({
             return (
               <Grid item key={id} xs={12} md={6}>
                 <TrackCard
+                  isLogged={isLogged}
                   difficulty={difficulty}
                   mountain={mountain}
                   name={name}
@@ -75,6 +77,7 @@ function TracksList({
 
 TracksList.propTypes = {
   className: PropTypes.string,
+  isLogged: PropTypes.bool.isRequired,
   trackFilterList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,

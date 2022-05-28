@@ -16,6 +16,9 @@ import HikingIcon from '@mui/icons-material/Hiking';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 import customTheme from '../../themes/customTheme';
 import { convertDurationToTime } from '../../utils/timeConverter';
 import Flag from '../Flag/Flag';
@@ -31,7 +34,20 @@ function TrackCard({
   img_card,
   favorableWind,
   duration,
+  isLogged,
 }) {
+  const BasicAlerts = () => {
+    console.log('dans onclick');
+      <Stack sx={{ width: '100%' }} spacing={2}>
+        <Alert variant="outlined" severity="error">
+          This is an error alert — check it out!
+        </Alert>
+      </Stack>;
+  };
+  const handleDelete = () => {
+    console.log('dans delete');
+    BasicAlerts();
+  };
   return (
     <Link
       to={`/track/${id}`}
@@ -56,7 +72,9 @@ function TrackCard({
               {name}
             </Typography>
             <Flag liftOff_id={id} />
+
           </Box>
+
           <ThemeProvider theme={customTheme}>
             <CardContent
               className="trackCard-content"
@@ -70,6 +88,7 @@ function TrackCard({
                 height: '100%',
               }}
             >
+
               <Typography className="trackCard-content__detail">
                 <TerrainIcon color="primary" style={{ fontSize: 15 }} /> Massif: {mountain}
               </Typography>
@@ -89,6 +108,15 @@ function TrackCard({
                 <TimerIcon color="primary" style={{ fontSize: 15 }} /> Temps estimé : {convertDurationToTime(duration)}
               </Typography>
             </CardContent>
+            {isLogged ? (
+              <DeleteIcon
+                onDelete={handleDelete}
+                sx={{ color: 'black' }}
+                onClick={BasicAlerts}
+
+              />
+            ) : ''}
+
           </ThemeProvider>
         </Box>
       </Card>
@@ -98,6 +126,7 @@ function TrackCard({
 }
 
 TrackCard.propTypes = {
+  isLogged: PropTypes.bool.isRequired,
   className: PropTypes.string,
   name: PropTypes.string.isRequired,
   difficulty: PropTypes.string.isRequired,

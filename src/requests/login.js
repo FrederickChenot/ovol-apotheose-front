@@ -10,7 +10,10 @@ export async function requestLogin(user, pass) {
     return response;
   }
   catch (err) {
-    return err.response;
+    return (
+      err.response,
+      alert('Login ou Mot de passe incorrect !')
+    );
   }
 }
 

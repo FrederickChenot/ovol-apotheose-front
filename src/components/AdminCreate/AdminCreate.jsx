@@ -47,20 +47,6 @@ function AdminCreate({
   const navigate = useNavigate();
 
   useEffect(async () => {
-    // setLoading(true);
-    // if (Object.keys(liftOff).length === 0) {
-    //   const response = await requestLiftOff(2);
-    //   console.log('response setloadn', response);
-    //   if (response.status === 200) {
-    //     setLiftOff(response.data[0]);
-    //   }
-    //   else {
-    //     console.log(response);
-    //     navigate('/error');
-    //   }
-    // }
-    // if (Object.keys(liftOff).length > 0) {
-    // }
     if (Object.keys(liftOff).length === 0) {
       const deco = {
         id: 2,
@@ -84,21 +70,6 @@ function AdminCreate({
   }, [liftOff]);
 
   useEffect(async () => {
-    // setLoading(true);
-    // if (Object.keys(landing).length === 0) {
-    //   const response = await requestLandings(2);
-    //   console.log('response setloadn', response);
-    //   if (response.status === 200) {
-    //     setLanding(response.data[0]);
-    //   }
-    //   else {
-    //     console.log(response);
-    //     navigate('/error');
-    //   }
-    // }
-    // if (Object.keys(landing).length > 0) {
-    //   setLoading(false);
-    // }
     if (Object.keys(landing).length === 0) {
       const atero = {
         id: 2,
@@ -120,21 +91,6 @@ function AdminCreate({
   }, [landing]);
 
   useEffect(async () => {
-    // setLoading(true);
-    // if (Object.keys(hiking).length === 0) {
-    //   const response = await requestHiking(2);
-    //   console.log('response setloadn', response);
-    //   if (response.status === 200) {
-    //     setHiking(response.data[0]);
-    //   }
-    //   else {
-    //     console.log(response);
-    //     navigate('/error');
-    //   }
-    // }
-    // if (Object.keys(hiking).length > 0) {
-    //   setLoading(false);
-    // }
     if (Object.keys(hiking).length === 0) {
       const rando = {
         id: 1,
@@ -303,18 +259,6 @@ function AdminCreate({
                           />
                         );
                       }
-                      // if (item !== 'id' && item !== 'photo_landing') {
-                      //   return (
-                      //     <TextField
-                      //       key={index + item}
-                      //       sx={{ p: '2px 4px', width: '100%' }}
-                      //       required
-                      //       label={item}
-                      //       placeholder={item}
-                      //       onChange={(event) => handleChangeLanding(item, event.target.value)}
-                      //     />
-                      //   );
-                      // }
                       if (item === 'photo_landing') {
                         return (
                           <>
